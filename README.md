@@ -84,7 +84,7 @@ It is common to have RMSE greater on the test set than on the training set. This
 
 Then, the predictions were made into the future.
 
-![](Images/SARIMA_Bit_Pred.png)
+![](Images_Crypto/SARIMA_Bit_Pred.png)
 
 ### Ethereum
 The time series was regrouped for yearly average values and compared to see if any changes took place over time. From the below plots, it was seen that Ethereum was at its peak once a year. In 2021 it reached its highest value.
@@ -130,7 +130,7 @@ It was reasonable to run model diagnostics to ensure that none of the assumption
 
 The model was tried on the test set and yielded RMSE of 154.93. The model was able to forecast the average monthly Ethereum prices in the test set within 154.9 of the real prices.  The average monthly Ethereum prices range from around 0.5 to over 250 in the normalized data. Then, the predictions were made into the future.
 
-![](Images/SARIMA_ETH_Pred.png)
+![](Images_Crypto/SARIMA_ETH_Pred.png)
 ***
 
 ### Model Evaluation
@@ -142,7 +142,7 @@ Although the predictions look similar, Bitcoin will experience mild changes whil
 
 Thus, judging by the resulted predicitons, it is possible to conclude, that Bitcoin is less risky one and among the two is worth investing into. However, as the forecast is made further out into the future, it becomes less confident in the values. In order to lose less money, it will be reasonable to invest in Bitcoin and sell the asset before its decline in the beginning-middle of October.
 
-![](Images/Bit_Eth.png)
+![](Images_Crypto/Bit_Eth.png)
 ***
 
 ## Conclusions
