@@ -1,7 +1,7 @@
 ![](Images/shutterstock_1318372334.jpeg)
 
 # Bitcoin and Ethereum Price Forecasting
-Authors: Volha Puzikava
+Author: Volha Puzikava
 ***
 
 ## Disclaimer
@@ -17,7 +17,7 @@ This project tends to forecast the price for both Bitcoin and Ethereum for the f
 ***
 
 ## Business Problem
-The Wall Street Company asked to analyze the prices of the top two cryptocurriences and predict their behaviour for the following 12 months in order to invest in the most promising one and loose as less money as possible. The main purpose of the analysis was to generate different time series models and reveal the most accurate forecast.
+The Wall Street Company asked to analyze the prices of the top two cryptocurriences and predict their behaviour for the following 6 months in order to invest in the most promising one and loose as less money as possible. The main purpose of the analysis was to generate different time series models and reveal the most accurate forecast.
 ***
 
 ## Data Understanding
@@ -36,13 +36,13 @@ From the performed visualizations, it was seen that the data was not normally di
 Before building any time series models, the data of two cryptocurrencies had to be normalized to one scale. The goal was achieved by applying division and multiplication functions to the data.
 
 ### Bitcoin 
-The time series was regrouped for yearly average values and compared to see if any changes took place over time. From the below plots, it was seen that Bitcoin usually was at its peak once a year, however, in 2021 it reached its highest value twice.
+The time series was regrouped for yearly average values and compared to see if any changes took place over time. From the plots, it was seen that Bitcoin usually was at its peak once a year, however, in 2021 it reached its highest value twice.
 
 Also, the boxplot showed that Bitcoin had some extreme values in 2017, 2018 and 2020. The other years could be considered smooth as no outliers were present.
 
 Because chronological order matters in time series, the train-test split was performed by cutting off a portion of data at the end and reserving it as a test set. As a result, 80% of the data or 55 first rows were considered as a train set.
 
-The data was ready for modelling. Different models were built and compared based on the Akaike's Information Criteria (AIC). AIC tested how well the models fit the data set without overfitting it. The AIC score rewarded models that achieved a high goodness-of-fit score and penalized them if they became overly complex. Better models had lower AIC. Also, p-values of weights and root mean square errors (RMSE) of train and test sets were analyzed. However, they were not of a big influence in decision making. The problem with RMSE was that with extending the lag length (including more lags as explanatory variables) a better value for RMSE was yielded. With AIC, on the contrary, the error increased when additional terms were included due to the adding penalty. Thus, lower AIC sometimes caused the higher RMSE, however, performed better outside the scope of the available data while forecasting. P-values were also not of a big concern. Some of them were a little higher than 0.05 and were retained in the models. The weights with much higher p-values were removed since they were not significant.
+The data was ready for modelling. Different models were built and compared based on the Akaike's Information Criteria (AIC). AIC tested how well the models fit the data set without overfitting it. The AIC score rewarded models that achieved a high goodness-of-fit score and penalized them if they became overly complex. Better models had lower AIC. Also, p-values of weights and root mean square errors (RMSE) of train and test sets were analyzed. However, they were not of a big influence in decision making. The problem with RMSE was that with extending the lag length (including more lags as explanatory variables) a better value for RMSE was yielded. With AIC, on the contrary, the error increased when additional terms were included due to the adding penalty. Thus, lower AIC sometimes caused high RMSE, however, performed better outside the scope of the available data while forecasting. P-values were also not of a big concern. Some of them were a little higher than 0.05 and were retained in the models. The weights with much higher p-values were removed since they were not significant.
 
 #### Baseline Model
 Baseline model was built with the help of shift operator. The prediction for the next day was the original series shifted to the future.
@@ -78,7 +78,7 @@ Although AIC value increased to 349.75, it remained the lowest among the generat
 
 Model diagnostics were run to ensure that none of the assumptions made by the model have been violated. The purpose here was to ensure that residuals remained uncorrelated, normally distributed having zero mean. In the absence of those assumptions, it was not possible to move forward. 
 
-It was not perfect, however, the model diagnostics suggested that the model residuals were near normally distributed. Thus, the red KDE line followed pretty much close with the N(0,1) line. That was a good indication that the residuals were normally distributed. The qq-plot showed that the ordered distribution of residuals more or less followed the linear trend of the samples taken from a standard normal distribution with N(0, 1). Again, that was an indication that the residuals were normally distributed. The residuals over time didn't display any obvious seasonality and appeared to be white noise. That was confirmed by the autocorrelation plot, which showed that the time series residuals had low correlation with lagged versions of itself.
+Model diagnostics were not perfect, however, they suggested that the model residuals were near normally distributed. Thus, the KDE line followed pretty much close with the N(0,1) line. That was a good indication that the residuals were normally distributed. The qq-plot showed that the ordered distribution of residuals more or less followed the linear trend of the samples taken from a standard normal distribution with N(0, 1). Again, that was an indication that the residuals were normally distributed. The residuals over time didn't display any obvious seasonality and appeared to be white noise. That was confirmed by the autocorrelation plot, which showed that the time series residuals had low correlation with lagged versions of itself.
 
 The model was tried on the test set. The RMSE value for the test set was 156.13.
 
@@ -100,9 +100,7 @@ The data was ready for modelling. Different models were built and compared based
 #### Baseline Model
 Baseline model was built with the help of shift operator. The prediction for the next day was the original series shifted to the future.
 
-The rolling standard deviation of the residuals as well as the residual variance were plotted. The graphs showed that the performance of the model varied at different points in time. It was due to the trends in the data. The series were made stationary by subtracting the Exponentially Weighted Moving Average and differencing the data. The stationarity of the data was then checked by the function that used rolling statistics and the Dickey-Fuller test.
-
-The differenced data was checked for stationarity. Since it was not stationary the Exponentially Weighted Moving Average was subtracted from the original data before differencing. The moving average is designed as such that older observations are given lower weights. The described method was chosen based on the following reasons: the method is widely used in finance, it smoothes the data, it is sensitive and follows data more closely without changing the values like log transformation does.
+The rolling standard deviation of the residuals as well as the residual variance were plotted. The graphs showed that the performance of the model varied at different points in time. It was due to the trends in the data. The series were made stationary by subtracting the Exponentially Weighted Moving Average and differencing the data. The moving average is designed as such that older observations are given lower weights. The described method was chosen based on the following reasons: the method is widely used in finance, it smoothes the data, it is sensitive and follows data more closely without changing the values like log transformation does. The stationarity of the data was then checked by the function that used rolling statistics and the Dickey-Fuller test.
 
 The p-value associated with the Dickey-Fuller statistical test was equal to 0.008, which was less than 0.05, so it was possible to assume that the differenced data was stationary.
 
@@ -132,7 +130,7 @@ SARIMA (Seasonal Auto Regressive Integrated Moving Average) Model was generated 
 The output of the code suggested that ARIMA(0, 1, 0) x (0, 2, 0, 12) yielded the lowest AIC value of 261.417. Those parameters considered to be optimal option out of all the models that were generated.
 
 #### ARIMA(0, 1, 0) x (0, 2, 0, 12) Model
-It was reasonable to run model diagnostics to ensure that none of the assumptions made by the model have been violated. The diagnostics didn't come out perfect, however, the red KDE line followed pretty much close with the N(0,1) line. The qq-plot showed that the ordered distribution of residuals more or less followed the red line. That was a strong indication that the residuals were nearly normally distributed. The residuals over time didn't display any obvious seasonality and appeared to be white noise. That was confirmed by the correlogram, which showed that the time series residuals had low correlation with lagged versions of itself.
+It was reasonable to run model diagnostics to ensure that none of the assumptions made by the model have been violated. The diagnostics didn't come out perfect, however, the KDE line followed pretty much close with the N(0,1) line. The qq-plot showed that the ordered distribution of residuals more or less followed the red line. That was a strong indication that the residuals were nearly normally distributed. The residuals over time didn't display any obvious seasonality and appeared to be white noise. That was confirmed by the correlogram, which showed that the time series residuals had low correlation with lagged versions of itself.
 
 The model was tried on the test set and yielded RMSE of 154.93. The model was able to forecast the average monthly Ethereum prices in the test set within 154.9 of the real prices.  The average monthly Ethereum prices range from around 0.5 to over 250 in the normalized data. Then, the predictions were made into the future.
 
@@ -155,5 +153,5 @@ Thus, judging by the resulted predicitons, it is possible to conclude, that Bitc
 
 Thus, based on the observations, sari_1_bitcoin and sari_ethereum are the best models for forecasting the average monthly prices for both cryptocurrencies for the following 6 months. Among the two, Bitcoin is worth investing into, since even with its ups and downs it will stay afloat according to the predictions. Ethereum will experience the same pattern in its evolution, however, the adjustments will be crucial.
 
-Of coarse, the resulted models are not not perfect and more digging is necessary. Firstly, it is advisable to generate other time series models, such as Prophet. Secondly, since the latest data is more important in such types of forecasting, it would be reasonable to work with less data but shorter periods (like daily or weekly) due to the behavior of the cryptocurrencies. The main problem with the built above models was the historical development of the assets. Because both cryptocurrencies demonstrated high values starting 2021, the train sets of the models mostly contained the data with no clear ups and downs. It influenced the predictions and RMSE values, as the model had to deal with the uknown in the test sets. Thus, it would be more logical to work with the data from 2020. Also, the ACI scores of the resulted models are not perfect and could be lessen with the further tuning. And least but not last, exogenous factors such as economic situation on the US market, political situation in the world, changes to the rules of cryptocurrencies protocols that include planned technical upgrades (forks), etc. were not taken into account. Fot now we can only conclude, that among the two, Bitcoin is less risky. However, it is strongly recommmended to do more thorough research and try other types of models.
+Of coarse, the resulted models are not not perfect and more digging is necessary. Firstly, it is advisable to generate other time series models, such as Prophet. Secondly, since the latest data is more important in such types of forecasting, it would be reasonable to work with less data but shorter periods (like daily or weekly) due to the behavior of the cryptocurrencies. The main problem with the built above models was the historical development of the assets. Because both cryptocurrencies demonstrated high values starting 2021, the train sets of the models mostly contained the data with no clear ups and downs. It influenced the predictions and RMSE values, as the model had to deal with the uknown in the test sets. Thus, it would be more logical to work with the data starting 2020. Also, the ACI scores of the resulted models are not perfect and could be lessen with the further tuning. And least but not last, exogenous factors such as economic situation on the US market, political situation in the world, changes to the rules of cryptocurrencies protocols that include planned technical upgrades (forks), etc. were not taken into account. For now we can only conclude, that among the two, Bitcoin is less risky. However, it is strongly recommmended to do more thorough research and try other types of models.
 ***
