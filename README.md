@@ -66,9 +66,7 @@ Moving Average Model was predicted by using the ACF. The series showed positive 
 #### ARIMA(2, 1, 0) Model
 The generated model had AIC of 443.21 and was tried on the test set. The RMSE value constittuted 64.07 on the test set and predictions were made into the future. 
 
-![](Images/ARIMA_Bitcoin_Pred.png)
-
-The predictions certainly left something to be desired. SARIMA (Seasonal Auto Regressive Integrated Moving Average) Model was generated to see if it could perform any better. Firstly, the optimal values that produced the lowest AIC value were found. The output of the code suggested that ARIMA(1, 1, 1) x (1, 1, 0, 12) yielded the lowest AIC value of 253.84. Those parameters considered to be optimal option out of all the models that were generated.
+The predictions left something to be desired. SARIMA (Seasonal Auto Regressive Integrated Moving Average) Model was generated to see if it could perform any better. Firstly, the optimal values that produced the lowest AIC value were found. The output of the code suggested that ARIMA(1, 1, 1) x (1, 1, 0, 12) yielded the lowest AIC value of 253.84. Those parameters considered to be optimal option out of all the models that were generated.
 
 #### ARIMA(1, 1, 1) x (1, 1, 0, 12) Model
 For the analyzed time series, weight of ar.S.L12 had a p-value much bigger than 0.05, and it was not reasonable to retain it in the model. The weight was removed and the model without it was generated.
@@ -121,9 +119,7 @@ The output of the code suggested that ARIMA(2, 1, 3) yielded the lowest AIC valu
 #### ARIMA(2, 1, 3) Model
 The model was generated and tried on the test set. The model yielded RMSE of 159.72. The predictions were then made to the future.
 
-![](Images/ARIMA_ETH_Pred.png)
-
-The predictions certainly left something to be desired. Although lower AIC was achieved, most of the p-values got very high and were not significant. It was not reasonable to forecast using that model.
+The predictions left something to be desired. Although lower AIC was achieved, most of the p-values got very high and were not significant. It was not reasonable to forecast using that model.
 
 SARIMA (Seasonal Auto Regressive Integrated Moving Average) Model was generated to see if it could perform any better. Firstly, the optimal values that produced the lowest AIC value were found.
 
@@ -146,7 +142,7 @@ Although the predictions look similar, Bitcoin will experience mild changes whil
 
 Thus, judging by the resulted predicitons, it is possible to conclude, that Bitcoin is less risky one and among the two is worth investing into. However, as the forecast is made further out into the future, it becomes less confident in the values. In order to lose less money, it will be reasonable to invest in Bitcoin and sell the asset before its decline in the beginning-middle of October.
 
-![](Images/Bit_and_Eth.png)
+![](Images/Bit_Eth.png)
 ***
 
 ## Conclusions
