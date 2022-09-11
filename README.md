@@ -5,7 +5,7 @@ Author: Volha Puzikava
 ***
 
 ## Disclaimer
-The  described analyses fulfill educational purposes only. The hypothetical business case and the results of forecasting should not be considered as financial advise, and have not been approved by any professional or financial organization.
+The  described analyses fulfill educational purposes only. The hypothetical business case and the results of forecasting should not be considered as financial advice, and have not been approved by any professional or financial organization.
 ***
 
 ## Overview
@@ -17,7 +17,7 @@ This project tends to forecast the price for both Bitcoin and Ethereum for the f
 ***
 
 ## Business Problem
-The Wall Street Company asked to analyze the prices of the top two cryptocurriences and predict their behaviour for the following 6 months in order to invest in the most promising one and loose as less money as possible. The main purpose of the analysis was to generate different time series models and reveal the most accurate forecast.
+The Wall Street Company asked to analyze the prices of the top two cryptocurriences and predict their behaviour for the following 6 months in order to invest in the most promising one and lose as less money as possible. The main purpose of the analysis was to generate different time series models and reveal the most accurate forecast.
 ***
 
 ## Data Understanding
@@ -144,7 +144,7 @@ The graph with the predicted and observed values for both Bitcoin and Ethereum f
 
 Although the predictions look similar, Bitcoin will experience mild changes while Ethereum will be subjected to cardinal adjustments in its behavior. As was mentioned in the beggining of the analysis, Bitcoin and Ethereum usually move in tandem, however, the resulted forecast shows some differences in the scope of predictions. The thing is that the correlation between bitcoin and ethereum for the last three months was only [0.61](https://www.macroaxis.com/invest/pair-correlation/BTC.CC/ETH.CC/Bitcoin-vs-Ethereum#:~:text=The%203%20months%20correlation%20between,assuming%20nothing%20else%20is%20changed), which is moderate correlation, meaning that as Bitcoin moves, either up or down, Ethereum will move in the same direction mostly of the times, but not all the time. Above all, Ethereum is an [independent asset and does not always accurately repeat the Bitcoin price movements](https://cointelegraph.com/news/truth-about-crypto-price-correlation-how-closely-does-eth-follow-btc).
 
-Thus, judging by the resulted predicitons, it is possible to conclude, that Bitcoin is less risky one and among the two is worth investing into. However, as the forecast is made further out into the future, it becomes less confident in the values. In order to loose less money, it will be reasonable to invest in Bitcoin and sell the asset before its decline in the beginning-middle of October.
+Thus, judging by the resulted predicitons, it is possible to conclude, that Bitcoin is less risky one and among the two is worth investing into. However, as the forecast is made further out into the future, it becomes less confident in the values. In order to lose less money, it will be reasonable to invest in Bitcoin and sell the asset before its decline in the beginning-middle of October.
 
 ![](Images/Bit and Eth.png)
 ***
