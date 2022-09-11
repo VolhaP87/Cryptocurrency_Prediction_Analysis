@@ -66,7 +66,7 @@ Moving Average Model was predicted by using the ACF. The series showed positive 
 #### ARIMA(2, 1, 0) Model
 The generated model had AIC of 443.21 and was tried on the test set. The RMSE value constittuted 64.07 on the test set and predictions were made into the future. 
 
-![](Images/ARIMA Bitcoin Pred.png)
+![](Images/ARIMA_Bitcoin_Pred.png)
 
 The predictions certainly left something to be desired. SARIMA (Seasonal Auto Regressive Integrated Moving Average) Model was generated to see if it could perform any better. Firstly, the optimal values that produced the lowest AIC value were found. The output of the code suggested that ARIMA(1, 1, 1) x (1, 1, 0, 12) yielded the lowest AIC value of 253.84. Those parameters considered to be optimal option out of all the models that were generated.
 
@@ -86,7 +86,7 @@ It is common to have RMSE greater on the test set than on the training set. This
 
 Then, the predictions were made into the future.
 
-![](Images/SARIMA Bit Pred.png)
+![](Images/SARIMA_Bit_Pred.png)
 
 ### Ethereum
 The time series was regrouped for yearly average values and compared to see if any changes took place over time. From the below plots, it was seen that Ethereum was at its peak once a year. In 2021 it reached its highest value.
@@ -121,7 +121,7 @@ The output of the code suggested that ARIMA(2, 1, 3) yielded the lowest AIC valu
 #### ARIMA(2, 1, 3) Model
 The model was generated and tried on the test set. The model yielded RMSE of 159.72. The predictions were then made to the future.
 
-![](Images/ARIMA ETH Pred.png)
+![](Images/ARIMA_ETH_Pred.png)
 
 The predictions certainly left something to be desired. Although lower AIC was achieved, most of the p-values got very high and were not significant. It was not reasonable to forecast using that model.
 
@@ -134,7 +134,7 @@ It was reasonable to run model diagnostics to ensure that none of the assumption
 
 The model was tried on the test set and yielded RMSE of 154.93. The model was able to forecast the average monthly Ethereum prices in the test set within 154.9 of the real prices.  The average monthly Ethereum prices range from around 0.5 to over 250 in the normalized data. Then, the predictions were made into the future.
 
-![](Images/SARIMA ETH Pred.png)
+![](Images/SARIMA_ETH_Pred.png)
 ***
 
 ### Model Evaluation
@@ -146,7 +146,7 @@ Although the predictions look similar, Bitcoin will experience mild changes whil
 
 Thus, judging by the resulted predicitons, it is possible to conclude, that Bitcoin is less risky one and among the two is worth investing into. However, as the forecast is made further out into the future, it becomes less confident in the values. In order to lose less money, it will be reasonable to invest in Bitcoin and sell the asset before its decline in the beginning-middle of October.
 
-![](Images/Bit and Eth.png)
+![](Images/Bit_and_Eth.png)
 ***
 
 ## Conclusions
