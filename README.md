@@ -84,7 +84,7 @@ It is common to have RMSE greater on the test set than on the training set. This
 
 Then, the predictions were made into the future.
 
-![](Images_Crypto/SARIMA_Bit_Pred.png)
+![](Images/SARIMA_Bit_Pred.png)
 
 ### Ethereum
 The time series was regrouped for yearly average values and compared to see if any changes took place over time. From the below plots, it was seen that Ethereum was at its peak once a year. In 2021 it reached its highest value.
@@ -135,7 +135,7 @@ It was reasonable to run model diagnostics to ensure that none of the assumption
 
 The model was tried on the test set and yielded RMSE of 170. The model was able to forecast the average monthly Ethereum prices in the test set within 170 of the real prices. The average monthly Ethereum prices range from around 0.5 to over 250 in the normalized data. Then, the predictions were made into the future.
 
-![](Images_Crypto/SARIMA_Eth_Pred.png)
+![](Images/SARIMA_Eth_Pred.png)
 ***
 
 ### Model Evaluation
@@ -147,7 +147,7 @@ The resulted predictions look similar. As was mentioned in the beggining of the 
 
 Thus, judging by the resulted predicitons, it is possible to conclude, that both cryptos are risky. Ethereum looks as the one that may bring income. However, the profit will not be big enough. As the forecast is made further out into the future, it becomes less confident in the values. According to the predictions it is not the best time for investment, since the rise in the price will not be huge. But if the company still wants to invest, it will be reasonable to invest in Ethereum and sell the asset before its decline in the beginning-middle of October. 
 
-![](Images_Crypto/Bit_Eth.png)
+![](Images/Bit_Eth.png)
 ***
 
 ## Conclusions
