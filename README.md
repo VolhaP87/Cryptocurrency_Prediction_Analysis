@@ -1,4 +1,4 @@
-![](Images/shutterstock_1318372334.jpeg)
+![](Images_Crypto/shutterstock_1318372334.jpeg)
 
 # Bitcoin and Ethereum Price Forecasting
 Author: Volha Puzikava
@@ -11,7 +11,7 @@ The  described analyses fulfill educational purposes only. The hypothetical busi
 ## Overview
 Over the last decade, cryptocurrency has gone from overlooked asset to a wildly popular investment. Cryptocurrencies are a form of digital currency secured through cryptography and computer networks. Cryptocurrencies let us buy goods and services, use apps and games or trade them for profit. About 59.1 million Americans owned some form of cryptocurrency in 2021.
 
-Of the more than 1,600 available cryptocurrencies on the market, both Bitcoin and Ethereum are in the top three. They usually move in tandem and are very similar to one another (not suprisingly, since the creator of ethereum learned from Bitcoin and produced more functionalities based on the concepts of Bitcoin). Bitcoin has the highest market cap among all the cryptocurrencies available right now. In a way, it’s the current world champion when it comes to cryptocurrencies. However, according to [Yahoo Finance](https://ca.finance.yahoo.com/news/why-ethereum-could-eventually-pass-200000116.html) Ethereum may overtake Bitcoin.
+Of the more than 1,600 available cryptocurrencies on the market, both Bitcoin and Ethereum are in the top three. They usually move in tandem and are very similar to one another (not suprisingly, since the creator of Ethereum learned from Bitcoin and produced more functionalities based on the concepts of Bitcoin). Bitcoin has the highest market cap among all the cryptocurrencies available right now. In a way, it’s the current world champion when it comes to cryptocurrencies. However, according to [Yahoo Finance](https://ca.finance.yahoo.com/news/why-ethereum-could-eventually-pass-200000116.html) Ethereum may overtake Bitcoin.
 
 This project tends to forecast the price for both Bitcoin and Ethereum for the following 6 months in order to find out which of the two is worth investing into. 
 ***
@@ -49,10 +49,10 @@ Baseline model was built with the help of shift operator. The prediction for the
 
 The rolling standard deviation of the residuals as well as the residual variance were plotted. The graphs showed that the performance of the model varied at different points in time. It was due to the trends in the data. The series were made stationary by differencing the data. The stationarity of the data was then checked by the function that used rolling statistics and the Dickey-Fuller test.
 
-The p-value associated with the Dickey-Fuller statistical test was equal to 0.039, which was less than 0.05, so we safely assumed that the differenced data was stationary.
+The p-value associated with the Dickey-Fuller statistical test was equal to 0.039, which was less than 0.05, so it was safely assumed that the differenced data was stationary.
 
 #### Random Walk Model
-Random Wlak Modle was generated and had the following parameters: AIC of 473.28 and RMSE of 18.84 for the train set.
+Random Wlak Modle was generated and had AIC of 473.28.
 
 Before plotting Autoregressive and Moving Average Models, autocorrelation and partial autocorrelation were plotted.
 
@@ -84,10 +84,10 @@ It is common to have RMSE greater on the test set than on the training set. This
 
 Then, the predictions were made into the future.
 
-![](Images/SARIMA_Bit_Pred.png)
+![](Images_Crypto/SARIMA_Bit_Pred.png)
 
 ### Ethereum
-The time series was regrouped for yearly average values and compared to see if any changes took place over time. From the below plots, it was seen that Ethereum was at its peak once a year. In 2021 it reached its highest value.
+The time series was regrouped for yearly average values and compared to see if any changes took place over time. From the plots, it was seen that Ethereum was at its peak once a year. In 2021 it reached its highest value.
 
 Also, the boxplot showed that Ethereum did not have any outliers and could be considered to perform smoothly throughout the years.
 
@@ -103,7 +103,7 @@ The rolling standard deviation of the residuals as well as the residual variance
 The p-value associated with the Dickey-Fuller statistical test was equal to 0.008, which was less than 0.05, so it was possible to assume that the differenced data was stationary.
 
 #### Random Walk Model
-Random Walk Model yielded AIC of 414.83 and RMSE of 10.96 for the train set.
+Random Walk Model yielded AIC of 414.83.
 
 Before plotting Autoregressive and Moving Average Models, autocorrelation and partial autocorrelation were plotted.
 
@@ -135,7 +135,7 @@ It was reasonable to run model diagnostics to ensure that none of the assumption
 
 The model was tried on the test set and yielded RMSE of 170. The model was able to forecast the average monthly Ethereum prices in the test set within 170 of the real prices. The average monthly Ethereum prices range from around 0.5 to over 250 in the normalized data. Then, the predictions were made into the future.
 
-![](Images/SARIMA_Eth_Pred.png)
+![](Images_Crypto/SARIMA_Eth_Pred.png)
 ***
 
 ### Model Evaluation
@@ -147,7 +147,7 @@ The resulted predictions look similar. As was mentioned in the beggining of the 
 
 Thus, judging by the resulted predicitons, it is possible to conclude, that both cryptos are risky. Ethereum looks as the one that may bring income. However, the profit will not be big enough. As the forecast is made further out into the future, it becomes less confident in the values. According to the predictions it is not the best time for investment, since the rise in the price will not be huge. But if the company still wants to invest, it will be reasonable to invest in Ethereum and sell the asset before its decline in the beginning-middle of October. 
 
-![](Images/Bit_Eth.png)
+![](Images_Crypto/Bit_Eth.png)
 ***
 
 ## Conclusions
