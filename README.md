@@ -155,3 +155,31 @@ Thus, based on the observations, sari_1_bitcoin and sari_1_ethereum are the best
 
 Of coarse, the resulted models are not perfect and more digging is necessary. Firstly, it is advisable to generate other time series models, such as Prophet. Secondly, since the latest data is more important in such types of forecasting, it would be reasonable to work with less data but shorter periods (like daily or weekly) due to the behavior of the cryptocurrencies. The main problem with the built above models was the historical development of the assets. Because both cryptocurrencies demonstrated high values starting 2021, the train sets of the models mostly contained the data with no clear ups and downs. It influenced the predictions and RMSE values, as the model had to deal with the uknown in the test sets. Thus, it would be more logical to work with the data starting 2020. Also, the AIC scores of the resulted models are not perfect and could be lessen with the further tuning. And least but not last, exogenous factors such as economic situation on the US market, political situation in the world, changes to the rules of cryptocurrencies protocols that include planned technical upgrades (forks), etc. were not taken into account. For now we can only conclude, that among the two, Ethereum may bring some income if bought now and sold by the mid of October. However, it is strongly recommmended to do more thorough research and try other types of models.
 ***
+
+### Reproduction Instructions
+This project uses:
+
+* [Anaconda](https://www.anaconda.com), a package and environment management tool
+* Python 3.8.5, with the following additional packages/libraries:
+  * Pandas 1.1.3
+  * NumPy 1.18.5
+  * Matplotlib 3.3.1
+  * Seaborn 0.11.0
+  * Scikit-Learn 0.23.2
+  * Statsmodels 0.12.0
+  
+If you would like to follow the analysis locally and have the above tools:
+* Fork and clone this repository.
+* Go to the [Investing.com](https://www.investing.com/crypto/currencies) website and download the data files.
+* You should then be able to run the analysis in the provided [Cryptocurrency Jupyter Notebook](https://github.com/VolhaP87/Cryptocurrency_Prediction_Analysis/blob/main/Cryptocurrency.ipynb).
+***
+
+### Sources
+* [Investing.com](https://www.investing.com/crypto/currencies) website
+* [Bitcoin and Ethereum Price Forecasting Presentation](https://github.com/VolhaP87/Cryptocurrency_Prediction_Analysis/blob/main/presentation.pdf)
+***
+
+### Contact Information
+With questions or feedback on this repository, please reach out via:
+* [GitHub](https://github.com/VolhaP87)
+* [LinkedIn](https://www.linkedin.com/in/volha-puzikava-2319294a/)
